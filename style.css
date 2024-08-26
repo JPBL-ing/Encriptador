@@ -1,0 +1,327 @@
+    /* Estilos generales */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        box-sizing: border-box;
+    }
+
+    /* Estilo del body */
+    body {
+        background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); /* Degradado vibrante de azul turquesa a azul oscuro */
+        color: #ffffff; /* Texto en blanco para contraste sobre el fondo oscuro */
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+        background-size: cover;
+        background-attachment: fixed; /* Fija el fondo para un efecto visual más atractivo */
+        height: 100%;
+    }
+
+    /* Estilo del header */
+    header {
+        width: 100%;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para el header */
+    }
+
+    /* Estilo del logo */
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+
+    /* Estilo del main */
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para el contenedor */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para mayor profundidad */
+    }
+
+
+    /* Estilo del contenedor de la caja de texto */
+    .contenedorcajatexto {
+        width: 100%;
+        max-width: 680px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilo de la caja de texto */
+    .cajatexto {
+        width: 100%;
+        height: 300px; /* Ajustado para menor altura */
+        border: 2px solid #0A3871; /* Borde con color de acento */
+        border-radius: 10px; /* Bordes redondeados */
+        background-color: #ffffff;
+        color: #0a3871;
+        font-size: 24px; /* Reducido tamaño de fuente */
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        padding: 10px; /* Añadido espacio interno */
+        box-sizing: border-box;
+        resize: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        transition: all 0.3s ease;
+    }
+
+    /* Placeholder de la caja de texto */
+    .cajatexto::placeholder {
+        color: #0a3871;
+    }
+
+    .cajatexto:hover {
+        border-color: #0A2F5A; /* Cambio de color del borde */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+    }
+
+    /* Estilo de alerta */
+    /* Estilo de alerta mejorado */
+    .alerta {
+        display: flex;
+        align-items: center;
+        background-color: #fcfbf4; /* Fondo amarillo dorado */
+        color: #333; /* Texto oscuro */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+        margin: 20px 0; /* Margen */
+        position: relative; /* Posicionamiento del icono */
+        font-weight: 500; /* Texto más visible */
+        border-left: 5px solid #6e2aeb; /* Borde naranja */
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-20px); /* Posición inicial */
+        animation: aparecer 0.5s forwards; /* Animación al aparecer */
+    }
+
+    .alerta img {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px; /* Espacio entre el icono y el texto */
+    }
+
+    .alerta span {
+        font-weight: bold; /* Destacar el mensaje */
+    }
+
+    @keyframes aparecer {
+        to {
+            opacity: 1; /* Se hace visible */
+            transform: translateY(0); /* Posición final */
+        }
+    }
+
+
+    /* Contenedor de botones */
+    .contenedor-botones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilo del botón encriptar */
+    .btn-encriptar {
+        width: 150px; /* Reducido ancho */
+        height: 50px; /* Reducida altura */
+        border-radius: 24px;
+        background: linear-gradient(145deg, #0A3871, #0A2F5A); /* Degradado para un efecto de profundidad */
+        color: white;
+        font-size: 16px; /* Tamaño de fuente adecuado */
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        border: none;
+        cursor: pointer;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), inset 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra externa e interna para profundidad */
+        transition: all 0.3s ease; /* Transición suave para efectos */
+    }
+
+    .btn-encriptar:hover {
+        background: linear-gradient(145deg, #0A2F5A, #0A3871);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), inset 4px 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.5); /* Agrega un resplandor en hover */
+    }
+
+    /* Estilo del botón desencriptar */
+    .btn-desencriptar {
+        width: 150px; /* Reducido ancho */
+        height: 50px; /* Reducida altura */
+        border-radius: 24px;
+        background: linear-gradient(145deg, #D8DFE8, #B0B9C8); /* Degradado para un efecto de profundidad */
+        color: #0A3871;
+        font-size: 16px; /* Tamaño de fuente adecuado */
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        border: 1px solid #0A3871;
+        cursor: pointer;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), inset 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra externa e interna para profundidad */
+        transition: all 0.3s ease; /* Transición suave para efectos */
+    }
+
+    .btn-desencriptar:hover {
+        background: linear-gradient(145deg, #B0B9C8, #D8DFE8);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), inset 4px 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.5); /* Agrega un resplandor en hover */
+    }
+
+    /* Estilo de la sección 2 */
+    .seccion2 {
+        width: 300px;
+        min-width: 300px;
+        height: 500px;
+        background-color: #ffffff;
+        border-radius: 32px;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
+        padding: 20px;
+        position: relative;
+        margin-left: 10px;
+    }
+
+    /* Contenedor del muñeco */
+    .contenedormunieco {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .contenedormunieco img {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+
+    /* Contenedor del párrafo */
+    .contenedor-parrafo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-parrafo h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #343A40;
+    }
+
+    .contenedor-parrafo p {
+        font-size: 14px;
+        color: #495057;
+        padding-top: 10px;
+    }
+
+    /* Contenedor de resultado */
+    .contenedor-resultado {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .contenedor-resultado p {
+        color: #495057;
+        font-size: 20px;
+    }
+
+    /* Contenedor para copiar */
+    .contenedor-copiar {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn-copiar {
+        width: 150px; /* Reducido ancho */
+        height: 50px; /* Reducida altura */
+        border-radius: 24px;
+        background: linear-gradient(145deg, #ffffff, #e0e0e0); /* Degradado para un efecto de profundidad */
+        color: #0A3871;
+        font-size: 14px; /* Reducido tamaño de fuente */
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        border: 1px solid #0A3871;
+        cursor: pointer;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), inset 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra externa e interna para profundidad */
+        transition: all 0.3s ease; /* Transición suave para efectos */
+    }
+
+    .btn-copiar:hover {
+        background: linear-gradient(145deg, #e0e0e0, #ffffff); /* Invertir el degradado en hover */
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), inset 4px 4px 6px rgba(0, 0, 0, 0.1); /* Ajustar la sombra en hover */
+    }
+
+    .btn-copiar:active {
+        background-color: #ddd; /* Color de fondo al hacer clic */
+        transform: translateY(1px); /* Efecto de clic */
+    }
+
+    /* Ocultar elementos */
+    .ocultar {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        header {
+            height: 60px;
+        }
+
+        .logo {
+            width: 15%; /* Aumentar el tamaño del logo en pantallas más pequeñas */
+        }
+
+        .cajatexto {
+            height: 200px; /* Reducir la altura de la caja de texto en pantallas más pequeñas */
+        }
+
+        .btn-encriptar, .btn-desencriptar, .btn-copiar {
+            width: 80%; /* Aumentar el ancho de los botones en pantallas más pequeñas */
+            height: 45px;
+        }
+
+        .contenedor-parrafo h3 {
+            font-size: 1rem; /* Ajustar el tamaño de la fuente */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .btn-encriptar, .btn-desencriptar, .btn-copiar {
+            width: 90%;
+            height: 40px;
+            font-size: 0.875rem;
+        }
+
+        .contenedor-parrafo h3 {
+            font-size: 0.875rem;
+        }
+
+        .contenedor-parrafo p {
+            font-size: 0.875rem;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .contenedorcajatexto {
+            max-width: 100%;
+        }
+    
+        .contenedor-botones {
+            flex-direction: column;
+        }
+    
+        .seccion2 {
+            width: 50%;
+            height: 500px;
+            margin-top: 20px;
+        }
+    
+        .contenedormunieco img {
+            max-width: 100%; /* Reducir tamaño del muñeco en tablet */
+        }
+    }
